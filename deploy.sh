@@ -88,5 +88,12 @@ if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
   exitWithMessageOnError "Kudu Sync failed"
 fi
 
+# 3. Generating .htaccess
+cd "$DEPLOYMENT_TARGET"
+echo "Generating .htaccess"
+touch .htaccess
+echo "Generating contents for .htaccess"
+echo "DirectoryIndex index.html" > .htaccess
+echo "Done Generating .htaccess"
 ##################################################################################################################################
 echo "Finished successfully."

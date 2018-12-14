@@ -5,7 +5,7 @@ class HttpClient {
 			    var req = new XMLHttpRequest();
 			    req.open('GET', url);
 			    req.onload = function() {
-			      if (req.status == 200) {
+			      if (req.status === 200) {
 			        resolve(req.response);
 			      }
 			      else {

@@ -53,6 +53,98 @@
   color: #61dafb;
 }
 
+.results {
+  width: 90%;
+}
+
+.recommendations: {
+  width: 90%
+}
+
+.resultsPane {
+  display: inline-block;  
+  width: 70%;
+  margin: 20px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+.resultsPane .table {
+  display: table;
+  width:100%;
+}
+
+.resultsPane .left {
+  display: table-cell;
+  text-align: left;
+  padding: 10px;
+}
+
+.resultsPane .right {
+  display: table-cell;
+  padding: 10px;
+  text-align: left;
+
+}
+
+.resultLabel { 
+ padding: 15px 20px 5px 40px;
+ font-size: x-large;
+ color: #282c34;
+}
+
+.recommendationsview {
+  padding: 20px 20px 40px 20px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.searchview {
+  padding: 20px 20px 40px 20px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.businessData {
+  display: table-cell;  
+  width: 82%;
+}
+
+.sentimentData {
+  display: table-cell;
+  font-size: small;  
+  width: 25%;
+}
+
+.businessName {
+   font-size:  x-large;
+   color: #256ca3;
+}
+
+.addressName {
+  font-size: medium;
+  color: #1fa391;
+}
+
+.positive {
+   font-size: x-large;
+   color: #28c933;
+}
+
+.neutral {
+   font-size: x-large;
+   color: #cccc00;
+}
+
+.negative {
+   font-size: x-large;
+   color: #cc0000;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

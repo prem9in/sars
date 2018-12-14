@@ -54,16 +54,16 @@
 }
 
 .results {
-  width: 90%;
+  width: 95%;
 }
 
 .recommendations: {
-  width: 90%
+  width: 95%
 }
 
 .resultsPane {
   display: inline-block;  
-  width: 70%;
+  width: 85%;
   margin: 20px;
   text-align: center;
   align-items: center;

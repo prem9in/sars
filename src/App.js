@@ -38,12 +38,12 @@ class App extends Component {
   handleChange(event) {
     let searchText = event.target.value;
     if (searchText && searchText.length > 3) {
-      let apiUrl = settings.searchUrlTemplate
-                      .replace("{{endpoint}}", settings.searchApiUrl)
+      let apiTargetUrl = settings.searchUrlTemplate
+                      .replace("{{endpoint}}", settings.searchApiTargetUrl)
                       .replace("{{searchtext}}", searchText)
                       .replace("{{searchcity}}", "Pittsburgh")
                       .replace("{{searchstate}}", "PA");
-      httpClient.get(apiUrl).then((response) => {
+      httpClient.get(settings.searchApiUrl, apiTargetUrl).then((response) => {
           let results = JSON.parse(response);
           this.setState({headerClass: 'App-header-results', results: results});
        });

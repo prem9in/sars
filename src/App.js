@@ -58,23 +58,29 @@ class App extends Component {
   }
 
   changeCity(event) {
-     let searchCity = event.target.value;
-     if (searchCity && searchCity.length > 2) {
+     let searchCity = event.target.value.trim();
+     if (searchCity && searchCity.length > 0) {
           this.setState({city: searchCity});
+      } else {
+         this.setState({city: ''});
       }
   }
 
   changeState(event) {
-     let searchState = event.target.value;
-      if (searchState && searchState.length > 1) {
+     let searchState = event.target.value.trim();
+      if (searchState && searchState.length > 0) {
           this.setState({state: searchState});
+      } else {
+         this.setState({state: ''});
       }
   }
 
   handleChange(event) {
-    let searchText = event.target.value;
-    if (searchText && searchText.length > 2) {
+    let searchText = event.target.value.trim();
+    if (searchText && searchText.length > 0) {
       this.setState({text: searchText});
+    } else {
+         this.setState({text: ''});
     }
   }
 

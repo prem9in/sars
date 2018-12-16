@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -18,15 +20,54 @@
   color: white;
 }
 
+.searchButton{
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+  cursor: pointer;
+  font-size: large;
+  background: #ffffff no-repeat right top;
+  background-position: center;
+  background-size: cover;
+  background-origin: content-box;
+  background-clip: content-box
+}
+
+.title {
+  padding-bottom: 15px;
+}
+
+
+.searchTextCont {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: table-cell;
+  box-sizing: border-box;
+  border-right: 1px solid #282c34;
+}
+
+.searchButtonCont {
+  display: table-cell;
+  cursor: pointer;
+  width: 100px;
+  height: 48px;
+  max-height: 50px;
+  border: 0px;
+}
+
 .App-header-results {
   background-color: #282c34;
-  min-height: 20vh;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-bottom: 25px;
 }
 
 .resultText {
@@ -36,13 +77,40 @@
 }
 
 .sarstext {
-  width: 600px;
-  height: 40px;
-  border-radius: 15px;
-  padding: 10px;
-  font-size: larger;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 450px;
+  height: 30px;
+  max-height: 32px;
+  border: 0px;
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+  padding: 8px;
+  font-size: large;
   color: #282c34;
 }
+
+.citytext {
+  margin-right: 20px;
+  width: 300px;
+  height: 25px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: large;
+  color: #282c34;
+}
+
+.statetext {
+  margin-left: 20px;
+  width: 80px;
+  height: 25px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: large;
+  color: #282c34;
+}
+
 
 .location {
   font-size: large;
@@ -102,7 +170,7 @@
 }
 
 .searchview {
-  padding: 20px 20px 40px 20px;
+  padding: 20px 20px 30px 20px;
   border: 1px solid #ccc;
   border-radius: 15px;
   margin: 20px;
@@ -127,6 +195,35 @@
 .addressName {
   font-size: medium;
   color: #1fa391;
+  padding: 10px 0px 0px 0px;
+}
+
+.ratingcontainer {
+  padding: 10px 0px 5px 0px;
+  vertical-align: top;
+}
+
+.noresults {
+  padding: 15px 20px 5px 50px;
+  font-size: medium;
+  color: #dd0000;
+}
+
+.ratings {
+  font-size: medium;
+  color: #6699cc;
+  vertical-align: bottom;
+}
+
+.starcontainer {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.star {
+  margin-left: 5px;
+  height: 20px;
+  width: 20px;
 }
 
 .positive {

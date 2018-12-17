@@ -155,6 +155,14 @@ class App extends Component {
      }
   }
 
+  renderHelp(search, recommendations) {
+  	if ((search && search.length > 0) || (recommendations && recommendations.length > 0)) {
+  		return (<div className="help"> <b> * Sentiment score </b> ranges from <b> -1 </b> to <b> +1 </b>. <b> -1 </b> being the <b> most negative </b> sentiment and <b> +1 </b> being the <b> most positive </b> sentiment. </div>);
+  	} else {
+  		return null;
+  	}
+  }
+
 
   render() {
 
@@ -162,7 +170,8 @@ class App extends Component {
       <div className="App">
         {this.renderSearch()}
         <div className="resultsPane">
-         <div className="table">
+        {this.renderHelp(this.state.results.searchResults, this.state.results.recommendations)}
+        <div className="table">
         <div className="left">        
         {this.renderResults(this.state.results.searchResults, "Search results", "No search results are available for query '" + this.state.text +"' and location '" + this.state.city + ", " + this.state.state + "'.")}
         </div>

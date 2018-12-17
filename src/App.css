@@ -265,6 +265,10 @@
   cursor: pointer;
 }
 
+.help {
+   font-size: medium; 
+}
+
 
 @keyframes App-logo-spin {
   from {

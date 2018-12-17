@@ -126,8 +126,8 @@ class App extends Component {
           <div className="location">Detected location: {this.formatAddress()} </div>
          <div className="location">Provide a different location: </div>
           <div>
-          <input type="text" placeholder="City" className="citytext" onChange={this.changeCity} value={this.state.city} />
-          <input type="text" placeholder="State" className="statetext" onChange={this.changeState} value={this.state.state} />
+          <input type="text" placeholder="City" className="citytext" onChange={this.changeCity} value={this.state.city} onKeyPress={this.onKeyPress} />
+          <input type="text" placeholder="State" className="statetext" onChange={this.changeState} value={this.state.state} onKeyPress={this.onKeyPress} />
           </div>
         </header>
       );

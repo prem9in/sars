@@ -241,6 +241,30 @@
    color: #cc0000;
 }
 
+.businesstopics {
+   font-size: smaller;
+   color: #cccc00;
+   display: block;
+}
+
+.rendertopics {
+  display: block;
+  font-size: smaller;
+  color: #28c933;
+}
+
+.hidetopics {
+  display: none;
+  font-size: smaller;
+  color: #28c933;
+}
+
+.topicLabel {
+  font-size: small;
+  color: #28c933;
+  cursor: pointer;
+}
+
 
 @keyframes App-logo-spin {
   from {

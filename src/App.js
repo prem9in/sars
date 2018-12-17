@@ -117,7 +117,7 @@ class App extends Component {
         <header className={this.state.headerClass}>
           <img src={logo} className="App-logo" alt="logo" />
           <div className="title">
-            Search and Recommender system
+            Search and Recommendation system
           </div>
           <div>
           <div className="searchTextCont"><input type="text" placeholder="Search text" className="sarstext" onKeyPress={this.onKeyPress} onChange={this.handleChange} /> </div>

@@ -5,6 +5,12 @@ import Star from './star.png';
 
 class SearchResultsView extends Component {
 
+   constructor(props) {
+    super(props);
+    this.state = {showTopics: false};
+    this.toggleTopic = this.toggleTopic.bind(this);
+  }
+
   getSentiment() {
   	let sentiment = this.props.item.sentiment.substring(0, 4);
   	let sentimentScore = parseFloat(sentiment);
@@ -45,9 +51,26 @@ class SearchResultsView extends Component {
     }
   }
 
+  toggleTopic(event) {
+      let newState = !this.state.showTopics;
+      this.setState({showTopics: newState});
+  }
+
+  renderTopics() {
+    let topicLabel = this.state.showTopics ? "Hide topics" :  "Show topics";
+    let rstyle = this.state.showTopics ? "rendertopics" :  "hidetopics";
+    let topics = this.props.item.topics.join(", ");
+    return (
+      <div className="businesstopics">  
+        <div className="topicLabel" onClick={this.toggleTopic}> {topicLabel} </div>
+        <div className={rstyle}> {topics} </div>
+      </div>
+    );
+  }
+
   render() {
   	let sentimentData = this.getSentiment();	
-  	return (
+  	return (      
   		<div className="searchview">
   			<div className="businessData">
 	  			<div className="businessName">{this.props.item.name}</div>
@@ -57,8 +80,9 @@ class SearchResultsView extends Component {
   			<div className="sentimentData">  				
   				Sentiment score
   				<div className={sentimentData.style}>{sentimentData.score}</div>  				
-  			</div>
-  		</div>
+  			</div>                  
+          
+      </div>
   	);
   }
 
